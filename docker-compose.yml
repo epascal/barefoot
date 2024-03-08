@@ -7,7 +7,8 @@ services:
       - "5432:5432"
     volumes:
       - barefoot-map:/mnt/map
-    command: bash -c "service postgresql start && sleep infinity"
+      - barefoot-db:/var/lib/postgresql/9.3/main
+    command: bash -c "sleep infinity"
     # Use the following command to run the import script if needed
     # command: bash /mnt/map/osm/import.sh
 
@@ -20,3 +21,4 @@ services:
       
 volumes:
   barefoot-map:
+  barefoot-db:
