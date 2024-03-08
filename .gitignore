@@ -1,5 +1,6 @@
 internal/
 doc/
+tmp/
 target/
 .project
 .pydevproject

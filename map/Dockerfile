@@ -11,7 +11,7 @@
 # language governing permissions and limitations under the License.
 #
 
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
 MAINTAINER sebastian.mattheis@bmw-carit.de
 

@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  map-server:
+    image: acette/barefoot-map:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - barefoot-map:/mnt/map
+    command: bash -c "service postgresql start && sleep infinity"
+    # Use the following command to run the import script if needed
+    # command: bash /mnt/map/osm/import.sh
+
+  matcher-server:
+    image: barefoot-match:latest
+    ports:
+      - "1234:1234"
+    depends_on:
+      - map-server
+      
+volumes:
+  barefoot-map:
