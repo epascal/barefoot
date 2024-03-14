@@ -5,6 +5,7 @@ target/
 .project
 .pydevproject
 .settings/
+node_modules
 .classpath
 .DS_Store
 *.osm.pbf
